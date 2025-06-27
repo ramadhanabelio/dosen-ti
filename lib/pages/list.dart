@@ -124,7 +124,7 @@ class _ListPageState extends State<ListPage> {
                             ),
                             const SizedBox(height: 4),
                             Text(
-                              'NIP: ${dosen.nip ?? "-"}',
+                              'NIP. ${dosen.nip ?? "-"}',
                               style: const TextStyle(
                                 color: Colors.white70,
                                 fontSize: 14,

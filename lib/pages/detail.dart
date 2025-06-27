@@ -52,9 +52,10 @@ class DetailPage extends StatelessWidget {
         child: const Icon(Icons.person, size: 50, color: Colors.white),
       );
     } else {
+      final fullImageUrl = 'http://127.0.0.1:8000/storage/$photoUrl';
       return CircleAvatar(
         radius: 50,
-        backgroundImage: NetworkImage(photoUrl),
+        backgroundImage: NetworkImage(fullImageUrl),
         backgroundColor: Colors.grey[200],
       );
     }
@@ -109,8 +110,8 @@ class DetailPage extends StatelessWidget {
             const SizedBox(height: 24),
             buildField('Nama', dosen.name),
             buildField('Email', dosen.email ?? '-'),
-            buildField('NIP', dosen.nip ?? '-'),
-            buildField('NIK', dosen.nik ?? '-'),
+            buildField('Nomor Induk Pegawai', dosen.nip ?? '-'),
+            buildField('Nomor Induk Karyawan', dosen.nik ?? '-'),
             buildField('Program Studi', dosen.prodi ?? '-'),
           ],
         ),
