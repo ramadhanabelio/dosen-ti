@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../constants/theme.dart';
 import '../services/api.dart';
+import '../components/fab.dart';
 import 'list.dart';
 
 class HomePage extends StatefulWidget {
@@ -135,6 +136,8 @@ class _HomePageState extends State<HomePage> {
           return const Center(child: CircularProgressIndicator());
         },
       ),
+      floatingActionButton: const FAB(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
 }
