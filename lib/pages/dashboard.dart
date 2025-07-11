@@ -283,7 +283,7 @@ class _DashboardPageState extends State<DashboardPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            buildProfilePhoto(),
+            Center(child: buildProfilePhoto()),
             const SizedBox(height: 24),
             buildItem('Nama', widget.lecturer.name),
             buildItem('NIP', widget.lecturer.nip),
